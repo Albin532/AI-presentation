@@ -1,0 +1,210 @@
+from weasyprint import HTML
+
+html_content = """
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+            background-color: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #24292e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #0366d6;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28pt;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            color: #0366d6;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            font-size: 18pt;
+        }
+        h3 {
+            color: #24292e;
+            font-size: 14pt;
+            margin-top: 20px;
+        }
+        .grid {
+            display: block; /* Flex workaround for WeasyPrint */
+        }
+        .card {
+            background: #f6f8fa;
+            border: 1px solid #d1d5da;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .pro-con {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .column {
+            display: table-cell;
+            width: 50%;
+            padding: 10px;
+            vertical-align: top;
+        }
+        .pro { border-left: 4px solid #28a745; background-color: #f0fff4; }
+        .con { border-left: 4px solid #d73a49; background-color: #ffeef0; }
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            font-weight: bold;
+            color: #0366d6;
+        }
+        code {
+            background-color: #f3f3f3;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Analys av Removal.AI</h1>
+        <p>En djupdykning i automatiserad bakgrundsborttagning</p>
+    </div>
+
+    <div class="container">
+        <h2>Introduktion</h2>
+        <p>
+            Removal.AI är en molnbaserad plattform som nyttjar avancerade algoritmer inom datorseende för att isolera motiv i bilder. 
+            Genom att använda artificiell intelligens kan tjänsten ersätta timmar av manuellt arbete med maskeringsverktyg i program som Photoshop.
+        </p>
+
+        <h2>Teknisk Analys: Hur modellen fungerar</h2>
+        <p>
+            Modellen bygger på en arkitektur som ofta liknar <em>Deep Neural Networks</em> (DNN), specifikt tränade för <strong>semantisk segmentering</strong>. 
+            Detta innebär att varje pixel i bilden klassificeras som antingen "förgrund" eller "bakgrund".
+        </p>
+        <div class="card">
+            <h3>Pixelklassificering</h3>
+            <p>
+                AI-modellen analyserar lokala mönster (kanter, texturer) och global kontext (vad objektet föreställer). 
+                Matematiskt kan man se det som en sannolikhetsfunktion <span class="math">P(f|p)</span>, där sannolikheten för förgrund <span class="math">f</span> 
+                beräknas för varje pixel <span class="math">p</span>.
+            </p>
+        </div>
+
+        <h2>Fördelar vs. Nackdelar</h2>
+        <div class="pro-con">
+            <div class="column pro">
+                <h3>Fördelar</h3>
+                <ul>
+                    <li><strong>Snabbhet:</strong> Behandling sker på under 5 sekunder.</li>
+                    <li><strong>Tillgänglighet:</strong> Inget behov av kraftfull lokal hårdvara (GPU).</li>
+                    <li><strong>Användarvänlighet:</strong> "Dra-och-släpp" gränssnitt kräver ingen förkunskap.</li>
+                    <li><strong>API-stöd:</strong> Möjliggör automatisering för e-handelsplattformar.</li>
+                </ul>
+            </div>
+            <div class="column con">
+                <h3>Nackdelar</h3>
+                <ul>
+                    <li><strong>Hår och päls:</strong> Kan ha svårt med extremt fina detaljer vid låg kontrast.</li>
+                    <li><strong>Lågupplöst gratisversion:</strong> Begränsningar i bildstorlek för gratisanvändare.</li>
+                    <li><strong>Sekretess:</strong> Bilder laddas upp till molnet, vilket kan vara känsligt för vissa företag.</li>
+                    <li><strong>Kantartefakter:</strong> Kan ibland skapa en "halo-effekt" runt motivet.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Användningsområden</h2>
+        <p>
+            Verktyget har revolutionerat arbetsflödet för:
+        </p>
+        <ul>
+            <li><strong>E-handel:</strong> Skapa enhetliga produktbilder med vit eller transparent bakgrund.</li>
+            <li><strong>Sociala medier:</strong> Snabba thumbnails och kollage för skapare.</li>
+            <li><strong>Grafisk design:</strong> Prototyping och snabba utkast.</li>
+        </ul>
+
+        <div class="card" style="margin-top: 40px; border-top: 3px solid #0366d6;">
+            <h3>Sammanfattande omdöme</h3>
+            <p>
+                Removal.AI är ett utmärkt val för 90% av alla vardagliga behov. För professionell retusch av modebilder med mycket "flygigt" hår 
+                kan manuell efterbearbetning fortfarande krävas, men som tidssparande verktyg är dess värde obestridligt.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+"""
+
+with open("removal_ai_analys.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+HTML(string=html_content).write_pdf("removal_ai_analys.pdf")
+
+# Generate the Markdown file for GitHub
+markdown_content = """# Analys av Removal.AI 🚀
+
+Välkommen till den tekniska genomgången av **Removal.AI** – ett kraftfullt verktyg för automatiserad bildredigering.
+
+## 📖 Innehållsförteckning
+- [Introduktion](#introduktion)
+- [Teknisk Analys](#teknisk-analys)
+- [Fördelar och Nackdelar](#fördelar-och-nackdelar)
+- [Användningsområden](#användningsområden)
+- [Slutsats](#slutsats)
+
+## Introduktion
+Removal.AI är en webbaserad tjänst som använder artificiell intelligens för att ta bort bakgrunder. Genom att kombinera datorseende (Computer Vision) med djupinlärning kan systemet isolera objekt med hög precision.
+
+## Teknisk Analys
+Systemet bygger på **maskininlärning**, specifikt tränat på miljontals bilder för att känna igen konturer på människor, djur och produkter.
+
+### Hur det fungerar:
+1. **Uppladdning:** Bilden skickas till en server.
+2. **Segmentering:** AI-modellen identifierar "förgrundsmasken".
+3. **Efterbehandling:** Kanterna jämnas ut (antialiasing) för att undvika hackiga linjer.
+4. **Export:** En PNG-fil med alfakanal (transparens) skapas.
+
+## Fördelar och Nackdelar
+
+### ✅ Fördelar
+- **Extremt snabbt:** Från uppladdning till färdig bild på sekunder.
+- **Batch-hantering:** Möjlighet att redigera många bilder samtidigt (betalversion).
+- **Inget krav på mjukvara:** Fungerar direkt i webbläsaren.
+- **Bra integration:** Erbjuder API för utvecklare.
+
+### ❌ Nackdelar
+- **Komplexa konturer:** Mycket detaljerade motiv (som spetsgardiner eller tunt hår) kan bli oskarpa.
+- **Krav på internet:** Eftersom analysen sker i molnet krävs en stabil uppkoppling.
+- **Kvalitetsbegränsningar:** Gratisanvändare får ofta nöja sig med lägre upplösning.
+
+## Användningsområden
+- **E-handel:** Skapa proffsiga produktbilder för Amazon eller Shopify.
+- **Marknadsföring:** Skapa snabba annonser och banners.
+- **Design:** Spara tid vid skapande av kollage.
+
+## Slutsats
+Removal.AI är ett av de mest tillgängliga verktygen på marknaden idag. Det är perfekt för användare som prioriterar snabbhet och enkelhet framför pixel-perfekt manuell kontroll.
+
+---
+*Skapad som en del av en teknisk studie kring AI-modeller för bildbehandling.*
+"""
+
+with open("README.md", "w", encoding="utf-8") as f:
+    f.write(markdown_content)
