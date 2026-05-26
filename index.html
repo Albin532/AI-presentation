@@ -1,139 +1,225 @@
 export default function RemovalAIAnalysis() {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
-      <header className="bg-black text-white py-12 px-6 shadow-lg">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl font-bold mb-4">Removal.AI – Djupanalys av AI-teknologi</h1>
-          <p className="text-lg text-gray-300 max-w-3xl">
-            En omfattande analys av hur Removal.AI fungerar, varför tekniken är viktig,
-            dess positiva och negativa effekter samt hur denna typ av AI kan påverka framtiden.
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-gray-900 text-white overflow-hidden">
+      <header className="relative border-b border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,200,0.15),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(0,150,255,0.12),transparent_40%)]" />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-28">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-2 mb-8 backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              <span className="text-sm tracking-wide text-gray-300">
+                Avancerad analys av AI och bildsegmentering
+              </span>
+            </div>
+
+            <h1 className="text-6xl md:text-7xl font-black leading-tight mb-8 bg-gradient-to-r from-white via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+              Removal.AI
+            </h1>
+
+            <p className="text-2xl text-gray-300 leading-relaxed mb-10 max-w-3xl">
+              En djupgående analys av hur artificiell intelligens revolutionerar
+              bildredigering genom automatisk bakgrundsborttagning,
+              neurala nätverk och framtidens visuella AI-system.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-transform shadow-2xl">
+                Utforska analysen
+              </button>
+
+              <button className="border border-white/20 bg-white/5 backdrop-blur-md px-8 py-4 rounded-2xl font-semibold hover:bg-white/10 transition-all">
+                Framtidens AI
+              </button>
+            </div>
+          </div>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-12 space-y-12">
-        <section className="bg-white rounded-3xl shadow-md p-8">
-          <h2 className="text-3xl font-bold mb-6">Vad är Removal.AI?</h2>
-          <p className="text-lg leading-8">
-            Removal.AI är en AI-baserad tjänst som automatiskt tar bort bakgrunder från bilder
-            och skapar transparenta PNG-filer. Det som tidigare krävde avancerad manuell
-            bildredigering i program som Photoshop kan idag göras på några sekunder genom
-            artificiell intelligens och bildsegmentering.
-          </p>
-        </section>
+      <main className="max-w-7xl mx-auto px-6 py-24 space-y-24">
+        <section className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-5xl font-bold mb-8 leading-tight">
+              Vad är egentligen Removal.AI?
+            </h2>
 
-        <section className="bg-white rounded-3xl shadow-md p-8">
-          <h2 className="text-3xl font-bold mb-6">Hur fungerar tekniken?</h2>
-          <p className="text-lg leading-8 mb-6">
-            Tekniken bakom Removal.AI bygger främst på deep learning och semantic segmentation.
-            AI:n analyserar varje pixel i bilden och avgör om den tillhör objektet eller
-            bakgrunden. För att kunna göra detta används neurala nätverk som tränats på
-            miljontals bilder.
-          </p>
+            <p className="text-xl text-gray-300 leading-9 mb-6">
+              Removal.AI är en AI-driven plattform som automatiskt identifierar och separerar
+              objekt från bakgrunder i bilder. Tekniken bygger på avancerad deep learning,
+              bildsegmentering och neurala nätverk som tränats på enorma mängder visuellt material.
+            </p>
 
-          <p className="text-lg leading-8 mb-6">
-            När en användare laddar upp en bild försöker AI-systemet identifiera huvudmotivet,
-            skapa en detaljerad mask och sedan separera objektet från bakgrunden. Extra avancerade
-            algoritmer används för att hantera hårstrån, päls, skuggor och halvtransparenta
-            objekt.
-          </p>
+            <p className="text-xl text-gray-300 leading-9">
+              Det som tidigare krävde professionella designers och flera timmars manuell redigering
+              kan idag genomföras på bara några sekunder. Systemet analyserar varje pixel i en bild,
+              förstår vilka delar som tillhör motivet och skapar därefter transparenta bakgrunder
+              med imponerande precision.
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mt-8">
-            <div className="bg-gray-100 rounded-2xl p-6">
-              <h3 className="text-xl font-semibold mb-3">1. Bildanalys</h3>
-              <p>
-                AI:n analyserar bildens innehåll och identifierar huvudobjektet.
-              </p>
-            </div>
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-3xl rounded-full" />
 
-            <div className="bg-gray-100 rounded-2xl p-6">
-              <h3 className="text-xl font-semibold mb-3">2. Segmentering</h3>
-              <p>
-                Varje pixel kategoriseras som förgrund eller bakgrund.
-              </p>
-            </div>
+            <div className="relative bg-white/5 border border-white/10 rounded-[32px] p-10 backdrop-blur-xl shadow-2xl">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-3 text-cyan-300">AI Bildförståelse</h3>
+                  <p className="text-gray-300 leading-8">
+                    AI:n analyserar former, konturer, färger, djup och visuella mönster för att
+                    förstå vad som är objekt och vad som är bakgrund.
+                  </p>
+                </div>
 
-            <div className="bg-gray-100 rounded-2xl p-6">
-              <h3 className="text-xl font-semibold mb-3">3. Transparens</h3>
-              <p>
-                Bakgrunden tas bort och sparas som transparent PNG.
-              </p>
+                <div>
+                  <h3 className="text-2xl font-bold mb-3 text-blue-300">Neurala nätverk</h3>
+                  <p className="text-gray-300 leading-8">
+                    Systemet använder deep learning-modeller som tränats på miljontals bilder för
+                    att förbättra precisionen och lära sig mänskliga visuella mönster.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold mb-3 text-purple-300">Automatisering</h3>
+                  <p className="text-gray-300 leading-8">
+                    Tekniken möjliggör helautomatiska arbetsflöden inom e‑handel, media,
+                    design och marknadsföring.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-white rounded-3xl shadow-md p-8">
-          <h2 className="text-3xl font-bold mb-6">Varför fungerar det så bra idag?</h2>
+        <section className="bg-white/5 border border-white/10 rounded-[40px] p-12 backdrop-blur-xl shadow-2xl">
+          <div className="max-w-5xl">
+            <h2 className="text-5xl font-bold mb-10">Hur fungerar tekniken bakom?</h2>
 
-          <p className="text-lg leading-8 mb-6">
-            AI för bildförståelse har utvecklats snabbt tack vare tre stora faktorer:
-            enorma mängder träningsdata, kraftfullare neurala nätverk och snabbare GPU-hårdvara.
-            Kombinationen av dessa tekniska framsteg gör att moderna AI-system kan förstå visuella
-            mönster nästan på mänsklig nivå.
-          </p>
+            <p className="text-xl text-gray-300 leading-9 mb-8">
+              Kärnan i Removal.AI bygger på semantic segmentation, en avancerad AI-teknik där
+              systemet analyserar varje enskild pixel i en bild för att avgöra om den tillhör
+              huvudobjektet eller bakgrunden. Detta sker genom flera lager av neurala nätverk
+              som successivt bryter ner bilden till visuella mönster och strukturer.
+            </p>
 
-          <ul className="space-y-4 text-lg list-disc pl-6">
-            <li>Miljontals träningsbilder förbättrar precisionen.</li>
-            <li>Deep learning-modeller förstår former och objekt bättre.</li>
-            <li>GPU:er möjliggör extremt snabb bildbearbetning.</li>
-          </ul>
-        </section>
+            <p className="text-xl text-gray-300 leading-9 mb-8">
+              När en användare laddar upp en bild sker flera processer samtidigt. Först normaliseras
+              bilden och skickas genom AI-modellen. Därefter identifieras huvudmotivet och en så kallad
+              alpha mask skapas. Den fungerar som en detaljerad karta över vilka delar som ska vara
+              synliga, transparenta eller halvtransparenta.
+            </p>
 
-        <section className="grid md:grid-cols-2 gap-8">
-          <div className="bg-green-50 border border-green-200 rounded-3xl p-8 shadow-sm">
-            <h2 className="text-3xl font-bold mb-6 text-green-700">Positiva effekter</h2>
-
-            <ul className="space-y-4 text-lg list-disc pl-6 leading-8">
-              <li>Enorm tidsbesparing för designers och företag.</li>
-              <li>Automatisering av bildredigering.</li>
-              <li>Professionella produktbilder för e-handel.</li>
-              <li>Billigare och mer tillgänglig design.</li>
-              <li>Stöd för kreativa arbetsflöden och sociala medier.</li>
-            </ul>
-          </div>
-
-          <div className="bg-red-50 border border-red-200 rounded-3xl p-8 shadow-sm">
-            <h2 className="text-3xl font-bold mb-6 text-red-700">Negativa effekter</h2>
-
-            <ul className="space-y-4 text-lg list-disc pl-6 leading-8">
-              <li>Vissa jobb inom bildredigering automatiseras bort.</li>
-              <li>AI:n gör fortfarande fel vid komplexa bilder.</li>
-              <li>Integritetsrisker när bilder laddas upp till molnet.</li>
-              <li>Black-box-problem där AI-beslut är svåra att förstå.</li>
-              <li>Beroende av externa AI-tjänster och servrar.</li>
-            </ul>
+            <p className="text-xl text-gray-300 leading-9">
+              Det mest imponerande är AI:ns förmåga att hantera svåra detaljer som hårstrån,
+              glas, päls och rörelseoskärpa. Moderna modeller använder edge refinement och soft
+              segmentation för att skapa mjuka och realistiska övergångar mellan objekt och bakgrund.
+            </p>
           </div>
         </section>
 
-        <section className="bg-white rounded-3xl shadow-md p-8">
-          <h2 className="text-3xl font-bold mb-6">Hur kan detta påverka framtiden?</h2>
+        <section>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-6">Positiva och negativa effekter</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-8">
+              AI-driven bildredigering förändrar hur människor arbetar, skapar och automatiserar
+              digitalt innehåll.
+            </p>
+          </div>
 
-          <p className="text-lg leading-8 mb-6">
-            Removal.AI representerar en större utveckling inom artificiell intelligens där datorer
-            börjar förstå bilder och visuella miljöer på pixelnivå. Samma teknik används redan inom
-            självkörande bilar, medicinsk bildanalys, robotik och mixed reality.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-10">
+            <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/5 border border-green-500/20 rounded-[32px] p-10 backdrop-blur-xl">
+              <h3 className="text-4xl font-bold mb-8 text-green-300">Positiva aspekter</h3>
 
-          <p className="text-lg leading-8 mb-6">
-            I framtiden kommer denna typ av AI sannolikt användas i realtidsvideo,
-            AR-glasögon, automatiserad medieproduktion och avancerade kreativa arbetsflöden.
-            AI-system kommer kunna analysera, redigera och publicera visuellt innehåll helt
-            automatiskt.
-          </p>
+              <div className="space-y-8">
+                <div>
+                  <h4 className="text-2xl font-semibold mb-3">Effektivitet</h4>
+                  <p className="text-gray-300 leading-8 text-lg">
+                    Det som tidigare tog timmar kan idag utföras på några sekunder. Detta sparar
+                    enorma resurser för företag och kreatörer.
+                  </p>
+                </div>
 
-          <div className="bg-black text-white rounded-2xl p-6 mt-8">
-            <h3 className="text-2xl font-bold mb-4">Framtidens AI</h3>
-            <p className="text-lg leading-8 text-gray-300">
-              Bakgrundsborttagning är bara början. Tekniken visar att AI nu kan förstå världen
-              visuellt, vilket öppnar dörren för framtida system inom AR, VR, robotik,
-              automatiserade medier och smarta digitala miljöer.
+                <div>
+                  <h4 className="text-2xl font-semibold mb-3">Tillgänglighet</h4>
+                  <p className="text-gray-300 leading-8 text-lg">
+                    Små företag och privatpersoner får nu tillgång till professionella verktyg
+                    utan avancerad designkunskap.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl font-semibold mb-3">Skalbar automation</h4>
+                  <p className="text-gray-300 leading-8 text-lg">
+                    AI möjliggör automatiserade pipelines där bilder bearbetas och publiceras
+                    direkt i digitala system.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-red-500/10 to-orange-500/5 border border-red-500/20 rounded-[32px] p-10 backdrop-blur-xl">
+              <h3 className="text-4xl font-bold mb-8 text-red-300">Negativa aspekter</h3>
+
+              <div className="space-y-8">
+                <div>
+                  <h4 className="text-2xl font-semibold mb-3">Automatisering av jobb</h4>
+                  <p className="text-gray-300 leading-8 text-lg">
+                    Många repetitiva arbetsuppgifter inom bildredigering riskerar att ersättas
+                    av AI-drivna lösningar.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl font-semibold mb-3">Integritetsrisker</h4>
+                  <p className="text-gray-300 leading-8 text-lg">
+                    Bilder laddas ofta upp till externa molnservrar vilket kan skapa risker kring
+                    personuppgifter och känsligt material.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl font-semibold mb-3">AI-fel och begränsningar</h4>
+                  <p className="text-gray-300 leading-8 text-lg">
+                    Komplexa bilder med låg kontrast, reflektioner eller genomskinliga objekt
+                    kan fortfarande förvirra AI-modellen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="relative overflow-hidden rounded-[40px] border border-white/10 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 p-14 backdrop-blur-2xl">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_35%)]" />
+
+          <div className="relative max-w-5xl">
+            <h2 className="text-6xl font-black mb-10 leading-tight">
+              Framtiden för AI och bildförståelse
+            </h2>
+
+            <p className="text-2xl text-gray-200 leading-10 mb-8">
+              Removal.AI är egentligen bara början på en mycket större teknologisk utveckling.
+              Samma grundläggande teknik används redan inom självkörande bilar, medicinsk analys,
+              robotik, augmented reality och framtidens smarta kameror.
+            </p>
+
+            <p className="text-xl text-gray-300 leading-9 mb-8">
+              I framtiden kommer AI-system kunna analysera live-video i realtid, skapa automatiska
+              3D-modeller och förstå komplexa visuella miljöer på ett sätt som tidigare bara människor
+              kunde göra. Detta öppnar dörren för avancerade AR-glasögon, intelligenta robotar och
+              automatiserade kreativa arbetsflöden.
+            </p>
+
+            <p className="text-xl text-gray-300 leading-9">
+              Det mest revolutionerande är att AI inte längre bara bearbetar text och siffror.
+              Moderna system börjar nu förstå den visuella världen. Detta kan förändra nästan alla
+              digitala branscher under de kommande åren.
             </p>
           </div>
         </section>
       </main>
 
-      <footer className="bg-black text-gray-400 py-8 text-center mt-12">
-        <p>Skapad för GitHub och webbpublicering • AI-analys av Removal.AI</p>
+      <footer className="border-t border-white/10 py-12 text-center text-gray-500 text-lg">
+        <p>Modern AI-analys • Byggd med React + Tailwind CSS • Klar för GitHub och webbpublicering</p>
       </footer>
     </div>
   );
