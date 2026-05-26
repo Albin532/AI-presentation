@@ -1,151 +1,140 @@
-
-
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <style>
-        @page {
-            size: A4;
-            margin: 20mm;
-            background-color: #ffffff;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #24292e;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 5px solid #0366d6;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 28pt;
-        }
-        .container {
-            padding: 20px;
-        }
-        h2 {
-            color: #0366d6;
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 8px;
-            margin-top: 30px;
-            font-size: 18pt;
-        }
-        h3 {
-            color: #24292e;
-            font-size: 14pt;
-            margin-top: 20px;
-        }
-        .grid {
-            display: block; /* Flex workaround for WeasyPrint */
-        }
-        .card {
-            background: #f6f8fa;
-            border: 1px solid #d1d5da;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-        .pro-con {
-            display: table;
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .column {
-            display: table-cell;
-            width: 50%;
-            padding: 10px;
-            vertical-align: top;
-        }
-        .pro { border-left: 4px solid #28a745; background-color: #f0fff4; }
-        .con { border-left: 4px solid #d73a49; background-color: #ffeef0; }
-        .math {
-            font-family: 'Times New Roman', serif;
-            font-style: italic;
-            font-weight: bold;
-            color: #0366d6;
-        }
-        code {
-            background-color: #f3f3f3;
-            padding: 2px 4px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>Analys av Removal.AI</h1>
-        <p>En djupdykning i automatiserad bakgrundsborttagning</p>
-    </div>
-
-    <div class="container">
-        <h2>Introduktion</h2>
-        <p>
-            Removal.AI är en molnbaserad plattform som nyttjar avancerade algoritmer inom datorseende för att isolera motiv i bilder. 
-            Genom att använda artificiell intelligens kan tjänsten ersätta timmar av manuellt arbete med maskeringsverktyg i program som Photoshop.
-        </p>
-
-        <h2>Teknisk Analys: Hur modellen fungerar</h2>
-        <p>
-            Modellen bygger på en arkitektur som ofta liknar <em>Deep Neural Networks</em> (DNN), specifikt tränade för <strong>semantisk segmentering</strong>. 
-            Detta innebär att varje pixel i bilden klassificeras som antingen "förgrund" eller "bakgrund".
-        </p>
-        <div class="card">
-            <h3>Pixelklassificering</h3>
-            <p>
-                AI-modellen analyserar lokala mönster (kanter, texturer) och global kontext (vad objektet föreställer). 
-                Matematiskt kan man se det som en sannolikhetsfunktion <span class="math">P(f|p)</span>, där sannolikheten för förgrund <span class="math">f</span> 
-                beräknas för varje pixel <span class="math">p</span>.
-            </p>
+export default function RemovalAIAnalysis() {
+  return (
+    <div className="min-h-screen bg-gray-100 text-gray-900">
+      <header className="bg-black text-white py-12 px-6 shadow-lg">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-5xl font-bold mb-4">Removal.AI – Djupanalys av AI-teknologi</h1>
+          <p className="text-lg text-gray-300 max-w-3xl">
+            En omfattande analys av hur Removal.AI fungerar, varför tekniken är viktig,
+            dess positiva och negativa effekter samt hur denna typ av AI kan påverka framtiden.
+          </p>
         </div>
+      </header>
 
-        <h2>Fördelar vs. Nackdelar</h2>
-        <div class="pro-con">
-            <div class="column pro">
-                <h3>Fördelar</h3>
-                <ul>
-                    <li><strong>Snabbhet:</strong> Behandling sker på under 5 sekunder.</li>
-                    <li><strong>Tillgänglighet:</strong> Inget behov av kraftfull lokal hårdvara (GPU).</li>
-                    <li><strong>Användarvänlighet:</strong> "Dra-och-släpp" gränssnitt kräver ingen förkunskap.</li>
-                    <li><strong>API-stöd:</strong> Möjliggör automatisering för e-handelsplattformar.</li>
-                </ul>
+      <main className="max-w-5xl mx-auto px-6 py-12 space-y-12">
+        <section className="bg-white rounded-3xl shadow-md p-8">
+          <h2 className="text-3xl font-bold mb-6">Vad är Removal.AI?</h2>
+          <p className="text-lg leading-8">
+            Removal.AI är en AI-baserad tjänst som automatiskt tar bort bakgrunder från bilder
+            och skapar transparenta PNG-filer. Det som tidigare krävde avancerad manuell
+            bildredigering i program som Photoshop kan idag göras på några sekunder genom
+            artificiell intelligens och bildsegmentering.
+          </p>
+        </section>
+
+        <section className="bg-white rounded-3xl shadow-md p-8">
+          <h2 className="text-3xl font-bold mb-6">Hur fungerar tekniken?</h2>
+          <p className="text-lg leading-8 mb-6">
+            Tekniken bakom Removal.AI bygger främst på deep learning och semantic segmentation.
+            AI:n analyserar varje pixel i bilden och avgör om den tillhör objektet eller
+            bakgrunden. För att kunna göra detta används neurala nätverk som tränats på
+            miljontals bilder.
+          </p>
+
+          <p className="text-lg leading-8 mb-6">
+            När en användare laddar upp en bild försöker AI-systemet identifiera huvudmotivet,
+            skapa en detaljerad mask och sedan separera objektet från bakgrunden. Extra avancerade
+            algoritmer används för att hantera hårstrån, päls, skuggor och halvtransparenta
+            objekt.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-8">
+            <div className="bg-gray-100 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold mb-3">1. Bildanalys</h3>
+              <p>
+                AI:n analyserar bildens innehåll och identifierar huvudobjektet.
+              </p>
             </div>
-            <div class="column con">
-                <h3>Nackdelar</h3>
-                <ul>
-                    <li><strong>Hår och päls:</strong> Kan ha svårt med extremt fina detaljer vid låg kontrast.</li>
-                    <li><strong>Lågupplöst gratisversion:</strong> Begränsningar i bildstorlek för gratisanvändare.</li>
-                    <li><strong>Sekretess:</strong> Bilder laddas upp till molnet, vilket kan vara känsligt för vissa företag.</li>
-                    <li><strong>Kantartefakter:</strong> Kan ibland skapa en "halo-effekt" runt motivet.</li>
-                </ul>
+
+            <div className="bg-gray-100 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold mb-3">2. Segmentering</h3>
+              <p>
+                Varje pixel kategoriseras som förgrund eller bakgrund.
+              </p>
             </div>
-        </div>
 
-        <h2>Användningsområden</h2>
-        <p>
-            Verktyget har revolutionerat arbetsflödet för:
-        </p>
-        <ul>
-            <li><strong>E-handel:</strong> Skapa enhetliga produktbilder med vit eller transparent bakgrund.</li>
-            <li><strong>Sociala medier:</strong> Snabba thumbnails och kollage för skapare.</li>
-            <li><strong>Grafisk design:</strong> Prototyping och snabba utkast.</li>
-        </ul>
+            <div className="bg-gray-100 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold mb-3">3. Transparens</h3>
+              <p>
+                Bakgrunden tas bort och sparas som transparent PNG.
+              </p>
+            </div>
+          </div>
+        </section>
 
-        <div class="card" style="margin-top: 40px; border-top: 3px solid #0366d6;">
-            <h3>Sammanfattande omdöme</h3>
-            <p>
-                Removal.AI är ett utmärkt val för 90% av alla vardagliga behov. För professionell retusch av modebilder med mycket "flygigt" hår 
-                kan manuell efterbearbetning fortfarande krävas, men som tidssparande verktyg är dess värde obestridligt.
+        <section className="bg-white rounded-3xl shadow-md p-8">
+          <h2 className="text-3xl font-bold mb-6">Varför fungerar det så bra idag?</h2>
+
+          <p className="text-lg leading-8 mb-6">
+            AI för bildförståelse har utvecklats snabbt tack vare tre stora faktorer:
+            enorma mängder träningsdata, kraftfullare neurala nätverk och snabbare GPU-hårdvara.
+            Kombinationen av dessa tekniska framsteg gör att moderna AI-system kan förstå visuella
+            mönster nästan på mänsklig nivå.
+          </p>
+
+          <ul className="space-y-4 text-lg list-disc pl-6">
+            <li>Miljontals träningsbilder förbättrar precisionen.</li>
+            <li>Deep learning-modeller förstår former och objekt bättre.</li>
+            <li>GPU:er möjliggör extremt snabb bildbearbetning.</li>
+          </ul>
+        </section>
+
+        <section className="grid md:grid-cols-2 gap-8">
+          <div className="bg-green-50 border border-green-200 rounded-3xl p-8 shadow-sm">
+            <h2 className="text-3xl font-bold mb-6 text-green-700">Positiva effekter</h2>
+
+            <ul className="space-y-4 text-lg list-disc pl-6 leading-8">
+              <li>Enorm tidsbesparing för designers och företag.</li>
+              <li>Automatisering av bildredigering.</li>
+              <li>Professionella produktbilder för e-handel.</li>
+              <li>Billigare och mer tillgänglig design.</li>
+              <li>Stöd för kreativa arbetsflöden och sociala medier.</li>
+            </ul>
+          </div>
+
+          <div className="bg-red-50 border border-red-200 rounded-3xl p-8 shadow-sm">
+            <h2 className="text-3xl font-bold mb-6 text-red-700">Negativa effekter</h2>
+
+            <ul className="space-y-4 text-lg list-disc pl-6 leading-8">
+              <li>Vissa jobb inom bildredigering automatiseras bort.</li>
+              <li>AI:n gör fortfarande fel vid komplexa bilder.</li>
+              <li>Integritetsrisker när bilder laddas upp till molnet.</li>
+              <li>Black-box-problem där AI-beslut är svåra att förstå.</li>
+              <li>Beroende av externa AI-tjänster och servrar.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="bg-white rounded-3xl shadow-md p-8">
+          <h2 className="text-3xl font-bold mb-6">Hur kan detta påverka framtiden?</h2>
+
+          <p className="text-lg leading-8 mb-6">
+            Removal.AI representerar en större utveckling inom artificiell intelligens där datorer
+            börjar förstå bilder och visuella miljöer på pixelnivå. Samma teknik används redan inom
+            självkörande bilar, medicinsk bildanalys, robotik och mixed reality.
+          </p>
+
+          <p className="text-lg leading-8 mb-6">
+            I framtiden kommer denna typ av AI sannolikt användas i realtidsvideo,
+            AR-glasögon, automatiserad medieproduktion och avancerade kreativa arbetsflöden.
+            AI-system kommer kunna analysera, redigera och publicera visuellt innehåll helt
+            automatiskt.
+          </p>
+
+          <div className="bg-black text-white rounded-2xl p-6 mt-8">
+            <h3 className="text-2xl font-bold mb-4">Framtidens AI</h3>
+            <p className="text-lg leading-8 text-gray-300">
+              Bakgrundsborttagning är bara början. Tekniken visar att AI nu kan förstå världen
+              visuellt, vilket öppnar dörren för framtida system inom AR, VR, robotik,
+              automatiserade medier och smarta digitala miljöer.
             </p>
-        </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-black text-gray-400 py-8 text-center mt-12">
+        <p>Skapad för GitHub och webbpublicering • AI-analys av Removal.AI</p>
+      </footer>
     </div>
-</body>
-</html>
+  );
+}
